@@ -7392,11 +7392,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADRIAN\\Desktop\\Uni\\Ciclo6ExcelB\\EvoluciónSoftware\\Visual\\Trabajo_Evo\\StudentHub_API_Backend\\StudentHub_API\\StudentHub_API.csproj",
+      "projectUniqueName": "C:\\Users\\ADRIAN\\Documents\\GitHub\\StudentHub-Backend\\StudentHub_API\\StudentHub_API.csproj",
       "projectName": "StudentHub_API",
-      "projectPath": "C:\\Users\\ADRIAN\\Desktop\\Uni\\Ciclo6ExcelB\\EvoluciónSoftware\\Visual\\Trabajo_Evo\\StudentHub_API_Backend\\StudentHub_API\\StudentHub_API.csproj",
+      "projectPath": "C:\\Users\\ADRIAN\\Documents\\GitHub\\StudentHub-Backend\\StudentHub_API\\StudentHub_API.csproj",
       "packagesPath": "C:\\Users\\ADRIAN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADRIAN\\Desktop\\Uni\\Ciclo6ExcelB\\EvoluciónSoftware\\Visual\\Trabajo_Evo\\StudentHub_API_Backend\\StudentHub_API\\obj\\",
+      "outputPath": "C:\\Users\\ADRIAN\\Documents\\GitHub\\StudentHub-Backend\\StudentHub_API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADRIAN\\AppData\\Roaming\\NuGet\\NuGet.Config",

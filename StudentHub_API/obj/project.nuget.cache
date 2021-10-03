@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DvMynIZPp85vXwmiS7r9PIK/6Ll5zSIlNkKc6Hb3hvwlck+fEKb5Kl1wXwuGQ8YJeoOV6bkQaiwN5VsAaOGt6g==",
+  "dgSpecHash": "5viJ3GofwDKF/orB7BZkWjXVmmVL3zP6KxTXFUDPPovezEmFlzqdkazVQ98amooNxl/uTgICSgGhiGjwKzOXcA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ADRIAN\\Desktop\\Uni\\Ciclo6ExcelB\\EvoluciónSoftware\\Visual\\Trabajo_Evo\\StudentHub_API_Backend\\StudentHub_API\\StudentHub_API.csproj",
+  "projectFilePath": "C:\\Users\\ADRIAN\\Documents\\GitHub\\StudentHub-Backend\\StudentHub_API\\StudentHub_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADRIAN\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\ADRIAN\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

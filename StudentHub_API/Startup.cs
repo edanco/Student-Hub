@@ -38,9 +38,10 @@ namespace StudentHub_API
             services.AddCors();
             services.AddDbContext<AppDbContext>(options =>
             {
-                //options.UseMySQL(Configuration.GetConnectionString("HerokuConnectionMySQL"));
-                //options.UseMySQL(Configuration.GetConnectionString("SmarterAspMySQLConnection"));
-                options.UseMySQL(Configuration.GetConnectionString("DefaultConnection"));
+
+                //options.UseMySQL(Configuration.GetConnectionString("DefaultConnection"));
+                options.UseMySQL(Configuration.GetConnectionString("SmartApiMySQL"));
+
             });
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             //Respositories
