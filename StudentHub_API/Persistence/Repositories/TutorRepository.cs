@@ -28,7 +28,13 @@ namespace StudentHub_API.Persistence.Repositories
         {
             return await _context.Tutors.ToListAsync();
         }
-
+        public async Task<IEnumerable<Tutor>> FindByCourseIdAsync(int courseId)
+        {
+            return await _context.Tutors
+                .Where(t => t.CourseId == courseId)
+                .Include(t => t.Course)
+                .ToListAsync();
+        }
         public void Remove(Tutor tutor)
         {
             _context.Tutors.Remove(tutor);

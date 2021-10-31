@@ -42,6 +42,16 @@ namespace StudentHub_API.Controllers
             return Ok(documentResource);
         }
 
+        [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<DocumentResource>), 200)]
+        public async Task<IEnumerable<DocumentResource>> GetAllAsync()
+        {
+            var documents = await _documentService.ListAsync();
+            var resorces = _mapper.Map<IEnumerable<Document>, IEnumerable<DocumentResource>>(documents);
+
+            return resorces;
+        }
+
         [SwaggerOperation(Tags = new[] { "documents" })]
         [HttpPut("{documentId}")]
         [ProducesResponseType(typeof(DocumentResource), 200)]

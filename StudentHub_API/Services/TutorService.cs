@@ -54,6 +54,11 @@ namespace StudentHub_API.Services
             return await _tutorRepository.ListAsync();
         }
 
+        public async Task<IEnumerable<Tutor>> FindByCourseId(int courseId)
+        {
+            var list = await _tutorRepository.FindByCourseIdAsync(courseId);
+            return list;
+        }
         public async Task<TutorResponse> SaveAsync(Tutor tutor)
         {
             try
@@ -67,6 +72,21 @@ namespace StudentHub_API.Services
                 return new TutorResponse($"An error ocurred while saving the tutor: {e.Message}");
             }
         }
+        public async Task<TutorResponse> SaveAsync(int courseId, Tutor tutor)
+        {
+            try
+            {
+                tutor.CourseId = courseId;
+                await _tutorRepository.AddAsync(tutor);
+                await _unitOfWork.CompleteAsync();
+                return new TutorResponse(tutor);
+            }
+            catch (Exception e)
+            {
+                return new TutorResponse("Has ocurred an error saving the tutor " + e.Message);
+            }
+        }
+
         public async Task<TutorResponse> UpdateAsync(int id, Tutor tutor)
         {
             var existingTutor = await _tutorRepository.FindById(id);

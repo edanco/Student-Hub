@@ -26,20 +26,30 @@ namespace StudentHub_API.Controllers
         }
 
         [SwaggerOperation(Tags = new[] { "tutors" })]
-        [HttpPost]
+        [HttpPost("courses/{courseId}/tutors")]
         [ProducesResponseType(typeof(TutorResource), 200)]
         [ProducesResponseType(typeof(BadRequestResult), 404)]
-        public async Task<IActionResult> PostAsync([FromBody] SaveTutorResource resource)
+        public async Task<IActionResult> PostAsync(int courseId, [FromBody] SaveTutorResource resource)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
             var tutor = _mapper.Map<SaveTutorResource, Tutor>(resource);
-            var result = await _tutorService.SaveAsync(tutor);
+            var result = await _tutorService.SaveAsync(courseId,tutor);
 
             if (!result.Success)
                 return BadRequest(result.Message);
+
             var tutorResource = _mapper.Map<Tutor, TutorResource>(result.Resource);
             return Ok(tutorResource);
+        }
+
+        [HttpGet("Courses/{courseId}/tutors")]
+        public async Task<IEnumerable<TutorResource>> GetAllByInstituteIdAsync(int courseId)
+        {
+            var tutors = await _tutorService.FindByCourseId(courseId);
+            var resources = _mapper.Map<IEnumerable<Tutor>, IEnumerable<TutorResource>>(tutors);
+
+            return resources;
         }
 
         [SwaggerOperation(Tags = new[] { "tutors" })]

@@ -39,6 +39,10 @@ namespace StudentHub_API.Services
                 return new DocumentResponse($"An error ocurred while deleting the document: {ex.Message}");
             }
         }
+        public async Task<IEnumerable<Document>> ListAsync()
+        {
+            return await _documentRepository.ListAsync();
+        }
 
         public async Task<DocumentResponse> GetByIdAsync(int id)
         {
@@ -47,11 +51,6 @@ namespace StudentHub_API.Services
             if (existingDocument == null)
                 return new DocumentResponse("Document not found");
             return new DocumentResponse(existingDocument);
-        }
-
-        public async Task<IEnumerable<Document>> ListAsync()
-        {
-            return await _documentRepository.ListAsync();
         }
 
         public async Task<DocumentResponse> SaveAsync(Document document)

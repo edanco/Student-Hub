@@ -9,6 +9,7 @@ namespace StudentHub_API.Domain.Services
 {
     public interface IDocumentService
     {
+        Task<IEnumerable<Document>> ListAsync();
         Task<DocumentResponse> GetByIdAsync(int id);
         Task<DocumentResponse> SaveAsync(Document document);
         Task<DocumentResponse> UpdateAsync(int id, Document document);

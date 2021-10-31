@@ -11,14 +11,12 @@ namespace StudentHub_API.Domain.Models
         public string Description { get; set; }
         public double PricePerHour { get; set; }
         
-        //relación con Schedule y plataform
-
+        //relación con Schedule, Course
         //// relationships
-        //public int CareerId { get; set; }
-        //public Career Career { get; set; }
+        public int CourseId { get; set; }
+        public Course Course { get; set; }
 
-        //public List<ExpertTopic> ExpertTopics { get; set; }
-        public List<Schedule> Shedules { get; set; }
+        public List<Schedule> Schedules { get; set; }
         //public List<Session> Sessions { get; set; }
         //public List<TutorReservation> TutorReservations { get; set; }
         //public List<SessionMaterial> SessionMaterials { get; set; }

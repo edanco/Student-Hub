@@ -42,6 +42,16 @@ namespace StudentHub_API.Controllers
             return Ok(userResource);
         }
 
+        [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<UserResource>), 200)]
+        public async Task<IEnumerable<UserResource>> GetAllAsync()
+        {
+            var users = await _userService.ListAsync();
+            var resorces = _mapper.Map<IEnumerable<User>, IEnumerable<UserResource>>(users);
+
+            return resorces;
+        }
+
         [SwaggerOperation(Tags = new[] { "users" })]
         [HttpPut("{userId}")]
         [ProducesResponseType(typeof(UserResource), 200)]

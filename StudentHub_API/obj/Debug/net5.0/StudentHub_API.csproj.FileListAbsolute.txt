@@ -151,7 +151,6 @@ C:\Users\ADRIAN\Documents\GitHub\StudentHub-Backend\StudentHub_API\obj\Debug\net
 C:\Users\ADRIAN\Documents\GitHub\StudentHub-Backend\StudentHub_API\obj\Debug\net5.0\staticwebassets\StudentHub_API.StaticWebAssets.xml
 C:\Users\ADRIAN\Documents\GitHub\StudentHub-Backend\StudentHub_API\obj\Debug\net5.0\scopedcss\bundle\StudentHub_API.styles.css
 C:\Users\ADRIAN\Documents\GitHub\StudentHub-Backend\StudentHub_API\obj\Debug\net5.0\StudentHub_API.RazorTargetAssemblyInfo.cache
-C:\Users\ADRIAN\Documents\GitHub\StudentHub-Backend\StudentHub_API\obj\Debug\net5.0\StudentHub_API.csproj.CopyComplete
 C:\Users\ADRIAN\Documents\GitHub\StudentHub-Backend\StudentHub_API\obj\Debug\net5.0\StudentHub_API.dll
 C:\Users\ADRIAN\Documents\GitHub\StudentHub-Backend\StudentHub_API\obj\Debug\net5.0\ref\StudentHub_API.dll
 C:\Users\ADRIAN\Documents\GitHub\StudentHub-Backend\StudentHub_API\obj\Debug\net5.0\StudentHub_API.pdb
