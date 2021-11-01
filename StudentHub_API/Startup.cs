@@ -83,6 +83,13 @@ namespace StudentHub_API
 
             app.UseRouting();
 
+            // CORS Configuration
+            app.UseCors(options => options
+                .SetIsOriginAllowed(x => _ = true)
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials());
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
