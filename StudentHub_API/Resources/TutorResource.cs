@@ -10,5 +10,6 @@ namespace StudentHub_API.Resources
         public int Id { get; set; }
         public string Description { get; set; }
         public double PricePerHour { get; set; }
+        public string Url { get; set; }
     }
 }

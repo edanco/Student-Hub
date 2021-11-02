@@ -97,6 +97,7 @@ namespace StudentHub_API.Services
             //falta llenar los updates
             existingTutor.Description = tutor.Description;
             existingTutor.PricePerHour = tutor.PricePerHour;
+            existingTutor.Url = tutor.Url;
 
             try
             {

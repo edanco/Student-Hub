@@ -10,6 +10,7 @@ namespace StudentHub_API.Domain.Models
         public int Id { get; set; }
         public string Description { get; set; }
         public double PricePerHour { get; set; }
+        public string Url { get; set; }
         
         //relación con Schedule, Course
         //// relationships

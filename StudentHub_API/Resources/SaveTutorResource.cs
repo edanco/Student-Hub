@@ -13,6 +13,8 @@ namespace StudentHub_API.Resources
         public string Description { get; set; }
         [Required]
         public double PricePerHour { get; set; }
+        [Required]
+        public string Url { get; set; }
 
     }
 }

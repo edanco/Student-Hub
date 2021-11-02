@@ -85,6 +85,7 @@ namespace StudentHub_API.Domain.Persistence.Contexts
             builder.Entity<Tutor>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Tutor>().Property(p => p.Description).IsRequired().HasMaxLength(120);
             builder.Entity<Tutor>().Property(p => p.PricePerHour).IsRequired();
+            builder.Entity<Tutor>().Property(p => p.PricePerHour).IsRequired();
 
             //Tutor One to many with Schedule
             builder.Entity<Tutor>()
