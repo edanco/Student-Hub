@@ -52,6 +52,16 @@ namespace StudentHub_API.Controllers
             return resources;
         }
 
+        [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<TutorResource>), 200)]
+        public async Task<IEnumerable<TutorResource>> GetAllAsync()
+        {
+            var tutors = await _tutorService.ListAsync();
+            var resorces = _mapper.Map<IEnumerable<Tutor>, IEnumerable<TutorResource>>(tutors);
+
+            return resorces;
+        }
+
         [SwaggerOperation(Tags = new[] { "tutors" })]
         [HttpPut("{tutorId}")]
         [ProducesResponseType(typeof(TutorResource), 200)]
