@@ -1,0 +1,11 @@
+language: c#
+c#:
+    - 7.3
+    - 8.0
+    - 9.0
+ before_install:
+ -chmod +x mvnw
+ 
+ script: "./mvnw clean install"
+ notifications:
+ email: edanco1011@gmail.com
